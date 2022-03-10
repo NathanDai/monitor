@@ -25,7 +25,7 @@ def getMSDATA(ms_url,cve_nums):
     cve_title = json_str['value'][cve_nums]['cveTitle']
     cve_info_MS.append(str(cve_title))
     #print(cve_title)
-    desc = json_str['value'][cve_nums]['description']
+    desc = json_str['value'][cve_nums]['articles'][0]['description']
     cve_info_MS.append(str(desc))
     #print(desc)
     mitre_url = json_str['value'][cve_nums]['mitreUrl']
